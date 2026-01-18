@@ -10,13 +10,17 @@ const API_URL = (() => {
     // If running on Codespace (github.dev domain)
     // URL pattern: <codespace-name>-<port>.app.github.dev
     // Example: silver-space-zebra-x57r57xgvw4xhp6wx-5173.app.github.dev
-    if (hostname.includes('.app.github.dev')) {
+    if (hostname.includes('.app.github.dev') || hostname.includes('.preview.app.github.dev')) {
       // Replace the port number (5173/5174) with backend port (8080)
-      const backendHostname = hostname.replace(/-5173\./, '-8080.').replace(/-5174\./, '-8080.');
+      const backendHostname = hostname
+        .replace(/-5173\./, '-8080.')
+        .replace(/-5174\./, '-8080.')
+        .replace(/-5173-/, '-8080-')
+        .replace(/-5174-/, '-8080-');
       return `${protocol}//${backendHostname}/api/tasks`;
     }
     
-    // For local development (localhost or 127.0.0.1)
+    // For local development (localhost or 127.0.0.1) - use proxy
     return '/api/tasks';
   }
   return '/api/tasks';
