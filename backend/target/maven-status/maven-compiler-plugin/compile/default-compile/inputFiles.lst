@@ -1,0 +1,6 @@
+/workspaces/Assigment/backend/src/main/java/com/example/taskmanager/model/Task.java
+/workspaces/Assigment/backend/src/main/java/com/example/taskmanager/model/TaskStatus.java
+/workspaces/Assigment/backend/src/main/java/com/example/taskmanager/repository/TaskRepository.java
+/workspaces/Assigment/backend/src/main/java/com/example/taskmanager/service/TaskService.java
+/workspaces/Assigment/backend/src/main/java/com/example/taskmanager/TaskManagerApplication.java
+/workspaces/Assigment/backend/src/main/java/com/example/taskmanager/controller/TaskController.java
